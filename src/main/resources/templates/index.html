@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Reverse image search</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
+    <link rel="stylesheet" type="text/css" href="css/app.css"/>
+</head>
+<body>
+<div class="main-container">
+
+    <div class="search">
+        <h1>Reverse Image Searching</h1>
+        <div class="col">
+            <form id="imageForm">
+                    <p class="step">Step 1: Upload a file</p>
+                    <input id="imgInput" type="file" />
+
+                    <p class="step">Step 2: Choose search type</p>
+                    <select id="searchType">
+                        <option value="JCD">FCTH + CEDD</option>
+                        <option value="FCTH">FCTH</option>
+                        <option value="ColorLayout">ColorLayout</option>
+                        <option value="AutoColorCorrelogram">AutoColorCorrelogram</option>
+                        <option value="CEDD">CEDD</option>
+                    </select>
+
+                    <p class="step">Step 3: </p>
+                    <input type="button" id="searchByImage" disabled="disabled" value="GO"/>
+            </form>
+            <div id="preloader">
+                <img id="loading" src="preloader.gif" />
+            </div>
+        </div>
+        <div class="col">
+            <img id="uploadedImage" src="#" alt="" style="display: none"/>
+        </div>
+
+    </div>
+
+    <div id="results">
+    </div>
+
+</div>
+<script src="js/lib/jQuery.js"/>
+<script src="js/fashionFinder.js"/>
+</body>
+</html>
